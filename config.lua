@@ -1,73 +1,304 @@
-------------------------------------------------------------------------
-------------------------------------------------------------------------
---																	  --
---     For support join my discord: https://discord.gg/Z9Mxu72zZ6     --
---																	  --
-------------------------------------------------------------------------
-------------------------------------------------------------------------
+--For support join my discord: https://discord.gg/Z9Mxu72zZ6
+config = {
+    menuPosition = "right",
 
-Config = {}
+    enableOpenCommand = true,
+    openCommand = "eup",
 
---Button = 0 |  Command = 1 | Blue circle = 2
-Config.OpenMenu = 1
+    enableAccessCircles = true,
+    accessCircles = {
+        {x = 448.0, y = 6008.4, z = 30.71}, -- Paleto PD
+        {x = 1849.10, y = 3689.49, z = 33.26}, -- Sandy PD
+        {x = 454.4, y = -989.1, z = 29.68}, -- Mission Code PD
+    },
 
---https://docs.fivem.net/game-references/controls/
-Config.MenuButton = 51
-
---This is the command that will open the menu (If chosen at Config.OpenMenu)
-Config.Command = "eup"
-
---Locations to access the eup menu from a blue circle (If chosen at Config.OpenMenu)
-Config.table = {
-	{x = 1849.88,y = 3695.16,z = 33.27},
-	{x = -452.62,y = 6013.77,z = 30.72},
-	{x = 461.62,y = -996.51,z = 29.69},
+    menuSetup = {
+        {
+            department = "San Andreas Highway Patrol",
+            {
+                subMenu = "EUP - Ped Presets",
+                {
+                    button = "Patrol Class A Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "Patrol Class B Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "Andy",
+                    props = {
+                        {0, 1, 0}, -- Hats
+                        {1, 5, 0}, -- Glasses
+                        {6, 14, 2} -- Watch
+                    },
+                    components = {
+                        {1, 0, 0}, -- Mask
+                        {3, 0, 0}, -- Upper body
+                        {4, 42, 6}, -- Legs / Pants
+                        {5, 0, 0}, -- Bags / Parachutes
+                        {6, 12, 0}, -- Shoes
+                        {7, 90, 0}, -- Neck / Scarfs
+                        {8, 15, 0}, -- Shirt / Accessory
+                        {9, 0, 0}, -- Body Armor
+                        {10, 0, 0}, -- Badges / Logos
+                        {11, 83, 4} -- Jackets
+                    },
+                },
+            },
+            {
+                subMenu = "EUP - Ped Components",
+                {
+                    button = "SAHP Vest",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "SAHP Hat",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+            },
+        },
+        {
+            department = "Los Santos Police Department",
+            {
+                subMenu = "EUP - Ped Presets",
+                {
+                    button = "Patrol Class A Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "Patrol Class B Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+            },
+            {
+                subMenu = "EUP - Ped Components",
+                {
+                    button = "LSPD Vest",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "LSPD Hat",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+            },
+        },
+        {
+            department = "Blaine County Sheriff's Office",
+            {
+                subMenu = "EUP - Ped Presets",
+                {
+                    button = "Patrol Class A Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "Patrol Class B Uniform",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+            },
+            {
+                subMenu = "EUP - Ped Components",
+                {
+                    button = "BCSO Vest",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+                {
+                    button = "BCSO Hat",
+                    props = {
+                        {0, 32, 1}, -- Hats
+                        {1, 0, 0}, -- Glasses
+                        {6, 0, 0} -- Watch
+                    },
+                    components = {
+                        {1, 1, 1}, -- Mask
+                        {3, 12, 1}, -- Upper body
+                        {4, 15, 1}, -- Legs / Pants
+                        {5, 56, 1}, -- Bags / Parachutes
+                        {6, 26, 1}, -- Shoes
+                        {7, 9, 1}, -- Neck / Scarfs
+                        {8, 106, 1}, -- Shirt / Accessory
+                        {9, 20, 1}, -- Body Armor
+                        {10, 1, 1}, -- Badges / Logos
+                        {11, 191, 1} -- Jackets
+                    },
+                },
+            },
+        },
+    }
 }
-
---This is the width of the menu when open
---Default = 80
-Config.MenuWidth = 80
-
---Default = 0 |  Player Name = 1  |  Custom = 2
-Config.MenuTitle = 0
-
---This is the custom title you can set for the menu (If chosen at Config.MenuTitle)
-Config.MenuTitleCustom = "Locker room"
-
---Change department names
-Config.SAHPName = "San Andreas Highway Patrol"
-Config.LSPDName = "Los Santos Police Department"
-Config.BCSOName = "Blaine County Sheriff's Office"
-Config.LSFDName = "Los Santos Fire Department"
-
---Hide or show departments
---Disabled = 0 | Enabled = 1
-Config.SAHPEnable = 1
-Config.LSPDEnable = 1
-Config.BCSOEnable = 1
-Config.LSFDEnable = 0
-
--- This will enable or disable accessories menu in components.
---Disable = 0 | Enabled = 1
-Config.AccessoriesEnable = 1
-
---Disabled = 0 | Enabled = 1
-Config.Loadout = 0
-
---Add wepons to the loadout option (If chosen at Config.Loadout)
---https://wiki.rage.mp/index.php?title=Weapons
-function weaponlist()
-	giveWeapon("weapon_nightstick")
-	giveWeapon("weapon_stungun")
-	giveWeapon("weapon_flashlight")
-	giveWeapon("weapon_combatpistol")
-	GiveWeaponComponentToPed(GetPlayerPed(-1), 1593441988, 0x359B7AAE)
-	giveWeapon("weapon_carbinerifle")
-	GiveWeaponComponentToPed(GetPlayerPed(-1), -2084633992, 0x7BC4CDDC)
-	GiveWeaponComponentToPed(GetPlayerPed(-1), -2084633992, 0xC164F53)
-	GiveWeaponComponentToPed(GetPlayerPed(-1), -2084633992, 0xA0D89C42)
-	giveWeapon("weapon_pumpshotgun")
-	GiveWeaponComponentToPed(GetPlayerPed(-1), 487013001, 0x7BC4CDDC)
-	SetPedArmour(GetPlayerPed(-1), 100)
-	notify("~g~Loadout equipped.")
-end
